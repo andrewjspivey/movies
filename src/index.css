@@ -101,36 +101,19 @@ code {
   width: 75%;
 }
 
-div.search-form {
+.form-inline {
+    display: inline-block !important;
+}
+
+
+.search-form {
     display: block;
-    text-align: center;
+    text-align: center !important;
     margin-top: 2rem;
 }
 
-div.search-form button {
-    background-color: darkred;
-    border-radius: 15%;
-}
-
-div.search-form label {
-  margin: 1rem;
-  font-size: 1.5rem;
-}
-
-div.search-form input {
-  width: 12rem;
-  margin-left: 0.5rem;
-}
-
-div.search-form select {
-  margin-left: 0.5rem;
-}
-
-form {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
+.custom-select {
+  margin-left: 0.5rem !important;
 }
 
 div.paginator {
@@ -142,15 +125,12 @@ div.paginator {
 .paginator button {
   background-color: darkred;
   width: 3rem;
-  height: 3rem;
   font-size: 2rem;
 }
 
-#search-text {
-  padding: 2rem;
-}
 
 h1 {
   text-align: center;
   color: darkred;
+  margin-top: 1em !important;
 }

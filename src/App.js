@@ -6,6 +6,8 @@ import MovieList from './MovieList'
 import Modal from './Modal'
 import Searchbar from './Searchbar'
 import Paginator from './Paginator'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 class App extends React.Component {
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import Button from 'react-bootstrap/Button'; 
+import Form from 'react-bootstrap/Form'
 
 
 
@@ -40,22 +41,24 @@ class Searchbar extends Component {
     render() {
     return (
         <div className="search-form">
-            <form onSubmit={this.handleSubmit}>
-            <label htmlFor='searchText'>
-                Title
-                <input type="text" id="searchText" name="searchText" placeholder="Search Title"
+        <Form inline onSubmit={this.handleSubmit}>
+            <Form.Row>
+                <Form.Control placeholder="Search Title"
                 value={this.state.searchTerm} onChange={this.handleChange}/>
-            </label>
-            <label htmlFor='search-type'>
-                Type
-                <select id='search-type' name='search-type' value={this.state.type} onChange={this.handleTypeChange}>
+                <Form.Control
+                as="select"
+                className="mr-sm-2"
+                id="search-type"
+                custom
+                name='search-type' value={this.state.type} onChange={this.handleTypeChange}
+                >
                     <option value='movie'>Movie</option>
                     <option value='series'>Series</option>
                     <option value='episode'>Episode</option>
-                </select>
-            </label>
-            <button>Search</button>
-            </form>
+                </Form.Control>
+                <Button onClick={this.handleSubmit} variant="primary" className="btn-primary">Search</Button>
+            </Form.Row>
+        </Form >
         </div>
         );
     }
